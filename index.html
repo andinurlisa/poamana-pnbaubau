@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Informasi Tilang — Pengadilan Negeri Baubau</title>
+<title>POAMANA — Portal Online Amankan Administrasi Tilang Anda</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -661,78 +661,6 @@
     text-align: right;
   }
 
-  /* ── VISITOR COUNTER ── */
-  .visitor-section {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
-    padding: 2rem 0;
-    margin-top: 1rem;
-  }
-
-  .visitor-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .visitor-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .visitor-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  .visitor-card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 12px;
-    padding: 1.25rem 1rem;
-    text-align: center;
-    transition: background 0.2s, transform 0.2s;
-    backdrop-filter: blur(6px);
-  }
-
-  .visitor-card:hover {
-    background: rgba(255,255,255,0.14);
-    transform: translateY(-2px);
-  }
-
-  .visitor-icon {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .visitor-count {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--gold-light);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-  }
-
-  .visitor-label {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.65);
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 600px) {
-    .visitor-grid { grid-template-columns: 1fr; }
-    .visitor-count { font-size: 1.6rem; }
-  }
-
   /* ── FOOTER ── */
   footer {
     background: var(--navy);
@@ -772,8 +700,8 @@
         alt="Logo Pengadilan Negeri Baubau" />
     </div>
     <div class="header-title">
-      <h1>POAMANA <br>Portal Online Amankan Administrasi Tilang Anda</h1>
-      <p class="sub">Layanan Informasi Publik - Sistem Informasi Tilang Secara Online</p>
+      <h1>POAMANA<br><span style="font-size:0.85rem;font-weight:500;letter-spacing:0.02em">Portal Online Amankan Administrasi Tilang Anda</span></h1>
+      <p class="sub">Pengadilan Negeri Baubau — Layanan Informasi Publik</p>
     </div>
   </div>
 </header>
@@ -804,7 +732,7 @@
   <div class="search-card">
     <div class="search-card-header">
       <div>
-        <h2>Pencarian Data Tilang</h2>
+        <h2>Pencarian Data Tilang — POAMANA</h2>
         <p>Masukkan nama atau nomor polisi kendaraan Anda</p>
       </div>
     </div>
@@ -838,10 +766,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <strong>Pengadilan Negeri Baubau Kelas IB</strong><br>
-  Jl. Betoambari No. 57, Kota Baubau, Sulawesi Tenggara<br>
-  <span class="divider">|</span> Data diperbarui setiap Jumat pagi <span class="divider">|</span>
-  Sistem Informasi Tilang <span class="divider">|</span> TIM IT PN BAUBAU
+  <strong>POAMANA — Portal Online Amankan Administrasi Tilang Anda</strong><br>
+  Pengadilan Negeri Baubau Kelas IB · Jl. Betoambari No. 57, Kota Baubau, Sulawesi Tenggara<br>
+  <span class="divider">|</span> Data diperbarui setiap Jumat pagi <span class="divider">|</span> TIM IT PN BAUBAU
 </footer>
 
 <!-- MODAL -->
@@ -1180,9 +1107,10 @@
         <br>Detail: <code>${escHtml(errMsg)}</code>
       </div>`;
   }
-   function escHtml(s) {
+
+  function escHtml(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
-
+</script>
 </body>
 </html>
