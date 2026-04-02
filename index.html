@@ -1211,30 +1211,6 @@
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 
-  // ================================================================
-  //  PENGHITUNG PENGUNJUNG
-  // ================================================================
-  function initVisitorCounter() {
-    const now = new Date();
-    const todayKey  = `vc_day_${now.getFullYear()}_${now.getMonth()+1}_${now.getDate()}`;
-    const monthKey  = `vc_month_${now.getFullYear()}_${now.getMonth()+1}`;
-    const yearKey   = `vc_year_${now.getFullYear()}`;
-    const sessionKey = 'vc_session';
-
-    // Hanya hitung sekali per sesi browser
-    if (!sessionStorage.getItem(sessionKey)) {
-      sessionStorage.setItem(sessionKey, '1');
-      localStorage.setItem(todayKey,  (parseInt(localStorage.getItem(todayKey)  || '0') + 1).toString());
-      localStorage.setItem(monthKey,  (parseInt(localStorage.getItem(monthKey)  || '0') + 1).toString());
-      localStorage.setItem(yearKey,   (parseInt(localStorage.getItem(yearKey)   || '0') + 1).toString());
-    }
-
-    document.getElementById('vc-today').textContent  = parseInt(localStorage.getItem(todayKey)  || '0').toLocaleString('id-ID');
-    document.getElementById('vc-month').textContent  = parseInt(localStorage.getItem(monthKey)  || '0').toLocaleString('id-ID');
-    document.getElementById('vc-year').textContent   = parseInt(localStorage.getItem(yearKey)   || '0').toLocaleString('id-ID');
-  }
-
-  window.addEventListener('DOMContentLoaded', initVisitorCounter);
 </script>
 </body>
 </html>
